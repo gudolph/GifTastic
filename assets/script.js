@@ -29,37 +29,39 @@ function gifSearch() {
     $.ajax({
         url: queryURL,
         method: "GET"
-    })
-        .then(function (response) {
-            var results = response.data;
-            for (var k = 0; k < results.length; k++) {
-                var gifDiv = $("<div>");
+    }).then(function (response) {
+        var results = response.data;
+        for (var k = 0; k < results.length; k++) {
+            var gifDiv = $("<div>");
 
-                var rating = results[k].rating;
+            var rating = results[k].rating;
 
-                var p = $("<p>").text("Rating: " + rating);
+            var p = $("<p>").text("Rating: " + rating);
 
-                var movieImage = $("<img>");
-                movieImage.attr("src", results[k].images.fixed_height_still.url);
-                movieImage.attr("data-still", results[k].images.fixed_height_still.url);
-                movieImage.attr("data-animate", results[k].images.fixed_height.url);
-                movieImage.attr("data-state", "still");
-                movieImage.addClass("gif");
-                console.log(movieImage);
-                gifDiv.prepend(p);
-                gifDiv.prepend(movieImage);
-                $(".gif").on("click", function () {
-                    var state = $(this).attr("data-state");
-                    if (state === "still") {
-                        $(this).attr("src", $(this).attr("data-animate"));
-                        $(this).attr("data-state", "animate");
-                    }
-                    else {
-                        $(this).attr("src", $(this).attr("data-still"));
-                        $(this).attr("data-state", "still");
-                    };
-                });
-                $("#movieGifs").prepend(gifDiv);
+            var movieImage = $("<img>");
+            movieImage.attr("src", results[k].images.fixed_height_still.url);
+            movieImage.attr("data-still", results[k].images.fixed_height_still.url);
+            movieImage.attr("data-animate", results[k].images.fixed_height.url);
+            movieImage.attr("data-state", "still");
+            movieImage.addClass("gif");
+            console.log(movieImage.attr("src"));
+            gifDiv.prepend(movieImage);
+            gifDiv.prepend(p);
+            $("#movieGifs").append(gifDiv);
+        }
+        $(".gif").on("click", function () {
+            var state = $(this).attr("data-state");
+            if (state === "still") {
+                $(this).attr("src", $(this).attr("data-animate"));
+                $(this).attr("data-state", "animate");
             }
+            else {
+                $(this).attr("src", $(this).attr("data-still"));
+                $(this).attr("data-state", "still");
+            };
+            console.log(movieImage.attr("src"));
+            console.log(state);
         });
+
+    });
 };
