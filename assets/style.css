@@ -1,0 +1,49 @@
+h1 {
+    font-size: 38px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#movieButtons {
+    text-align: center;
+    background-color: cornsilk;
+}
+
+.movie {
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: lightblue;
+    margin: 0 auto;
+    cursor: pointer,
+}
+
+.movie:hover {
+    background-color: cadetblue;
+}
+
+#search {
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 50px;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    background-color: lightseagreen;
+    padding: 20px 15px 0px 15px;
+}
+
+#searchfield:focus {
+    background-color: lightblue;
+  }
+#searchfield {
+    float: left;
+    margin-left: 15px; 
+}
+#label {
+    float: left;
+    padding-right: 5px[]
+}
+#submit {
+    float: right;
+}

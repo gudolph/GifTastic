@@ -23,6 +23,7 @@ $("#submit").on("click", function (event) {
 renderButtons();
 $(document).on("click", ".movie", gifSearch);
 function gifSearch() {
+    $("#movieGifs").empty();
     var movie = $(this).attr("data-name");
     var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + movie + apikey + "&limit=10";
 
@@ -45,8 +46,8 @@ function gifSearch() {
             movieImage.attr("data-state", "still");
             movieImage.addClass("gif");
             console.log(movieImage.attr("src"));
-            gifDiv.prepend(movieImage);
             gifDiv.prepend(p);
+            gifDiv.prepend(movieImage);
             $("#movieGifs").append(gifDiv);
         }
         $(".gif").on("click", function () {
