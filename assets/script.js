@@ -18,7 +18,6 @@ $("#submit").on("click", function (event) {
     var movie = $("#searchfield").val().trim();
     movies.push(movie);
     renderButtons();
-    console.log(movies);
 });
 renderButtons();
 $(document).on("click", ".movie", gifSearch);
@@ -37,7 +36,7 @@ function gifSearch() {
 
             var rating = results[k].rating;
 
-            var p = $("<p>").text("Rating: " + rating);
+            var p = $("<p>").text("Rating: " + rating.toUpperCase());
 
             var movieImage = $("<img>");
             movieImage.attr("src", results[k].images.fixed_height_still.url);
@@ -60,8 +59,7 @@ function gifSearch() {
                 $(this).attr("src", $(this).attr("data-still"));
                 $(this).attr("data-state", "still");
             };
-            console.log(movieImage.attr("src"));
-            console.log(state);
+
         });
 
     });

@@ -7,6 +7,9 @@ h1 {
 #movieButtons {
     text-align: center;
     background-color: cornsilk;
+    margin: 0 auto;
+    width: 600px;
+    padding: 20px 30px 20px 30px;
 }
 
 .movie {
@@ -17,6 +20,16 @@ h1 {
     cursor: pointer,
 }
 
+#movieGifs {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-end;
+    align-content: flex-start;
+    width: 80%;
+}
 .movie:hover {
     background-color: cadetblue;
 }
@@ -24,26 +37,36 @@ h1 {
 #search {
     font-size: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    height: 50px;
+    height: 35px;
     margin-left: 15%;
     margin-right: 15%;
-    margin-bottom: 15px;
-    margin-top: 15px;
+    margin-bottom: 0px;
+    margin-top: 0px;
     background-color: lightseagreen;
-    padding: 20px 15px 0px 15px;
+    padding: 10px 15px 10px 15px;
 }
 
 #searchfield:focus {
     background-color: lightblue;
   }
 #searchfield {
-    float: left;
     margin-left: 15px; 
+    justify-content: center;
 }
 #label {
     float: left;
-    padding-right: 5px[]
+
+    padding-right: 5px;
+    font-size: 24px;
 }
 #submit {
     float: right;
+    margin-top: 4px;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    margin: 10px 0px 10px 0px;
+    text-align: center;
 }
