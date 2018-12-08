@@ -1,3 +1,7 @@
+body {
+    background-color: ghostwhite;
+}
+
 h1 {
     font-size: 38px;
     text-align: center;
@@ -28,7 +32,6 @@ h1 {
     justify-content: space-around;
     align-items: flex-end;
     align-content: flex-start;
-    width: 80%;
 }
 .movie:hover {
     background-color: cadetblue;
@@ -38,8 +41,8 @@ h1 {
     font-size: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     height: 35px;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 20%;
+    margin-right: 20%;
     margin-bottom: 0px;
     margin-top: 0px;
     background-color: lightseagreen;
@@ -55,7 +58,6 @@ h1 {
 }
 #label {
     float: left;
-
     padding-right: 5px;
     font-size: 24px;
 }
